@@ -1,0 +1,133 @@
+body {
+  padding-left: 25px;
+  background-color: #ffffff;
+  font-family: sans-serif;
+  font-size: 0.75em;
+  font-weight: bolder;
+}
+
+a {
+  color: inherit;
+}
+
+h3 {
+  padding-bottom: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}
+
+div#messageArea {
+  margin-bottom: 20px;
+}
+
+ol.level-1,
+ol.level-2,
+ol.level-3,
+ol.level-4,
+ol.level-5,
+ol.level-6,
+ol.level-7,
+ol.level-8,
+ol.level-9,
+ol.level-10,
+ol.level-11,
+ol.level-12,
+ol.level-13,
+ol.level-14,
+ol.level-15,
+ol.level-16,
+ol.level-17,
+ol.level-18,
+ol.level-19,
+ol.level-20 {
+    margin-left: 175px;
+    border-style: solid solid none none;
+    border-top-right-radius: 10px;
+    border-width: thin;
+}
+
+li.descendant {
+    width: 150px;
+    margin-top: 10px;
+    padding: 10px 25px;
+    border-style: solid solid solid solid;
+    border-radius: 10px 10px 10px 0;
+    border-width: thin;
+    background-color: #51c7a2;
+}
+
+div.person {
+    background-color: #51c7a2;
+}
+
+div.label {
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top-style: dashed;
+    border-top-width: 1px;
+    font-weight: lighter;
+}
+
+div.spouse {
+    margin-top: 5px;
+    padding-top: 10px;
+    border-top-style: dashed;
+    border-top-width: 1px;
+}
+
+nav#mainMenu > ul {
+  width: 400px;
+  padding-bottom: 10px;
+  border-bottom-style: solid;
+  list-style: none;
+}
+
+nav#mainMenu > ul > li{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+
+fieldset, label, input {
+  display: block;
+  margin-top: 10px;
+  width: 250px;
+}
+
+table#personData {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table#personData td {
+  padding: 10px;
+  border-style: solid;
+  border-width: thin;
+  border-collapse: collapse;
+}
+
+.fieldValue {
+  font-weight: lighter;
+}
+
+table#childrenData {
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+table#childrenData th, table#childrenData td {
+  padding: 10px;
+  border-style: solid;
+  border-width: thin;
+  border-collapse: collapse;
+}
+
+li.spouse {
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 250px;
+  height: 80px;
+}
