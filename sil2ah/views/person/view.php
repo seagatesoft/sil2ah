@@ -5,6 +5,7 @@
 <table id="personData">
   <tbody>
     <tr><td class="fieldName">Jenis Kelamin</td><td class="fieldValue"><?php echo displayPersonGender($person['gender']);?></td></tr>
+    <?php if ('S' != $person['person_type']):?>
     <tr>
       <td class="fieldName">Ayah</td>
       <td class="fieldValue"><?php echo createPersonLink($father);?></td>
@@ -14,6 +15,7 @@
       <td class="fieldValue"><?php echo createPersonLink($mother);?></td>
     </tr>
     <tr><td class="fieldName">Anak ke</td><td class="fieldValue"><?php echo $person['sibling_index'];?></td></tr>
+    <?php endif;?>
     <tr><td class="fieldName">Alamat</td><td class="fieldValue"><?php echo $personAttributes['address'];?></td></tr>
     <tr><td class="fieldName">No. Telpon/Whatsapp</td><td class="fieldValue"><?php echo $personAttributes['phone_number'];?></td></tr>
     <tr><td class="fieldName">PIN BBM</td><td class="fieldValue"><?php echo $personAttributes['bbm'];?></td></tr>
