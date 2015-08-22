@@ -58,20 +58,18 @@
     </tbody>
   </table>
   <?php endif;?>
-  <?php if ($person['person_type'] != 'S'):?>
-    <?php if ($person['gender'] == 'M'):?>
-      <div>
-        <a href="index.php?module=person&action=add_child&father=<?php echo $person['uuid'];?>&mother=<?php echo $spouse['uuid'];?>">
-          <button>Tambah Data Anak</button>
-        </a>
-      </div>
-    <?php else:?>
-      <div>
-        <a href="index.php?module=person&action=add_child&father=<?php echo $spouse['uuid'];?>&mother=<?php echo $person['uuid'];?>">
-          <button>Tambah Data Anak</button>
-        </a>
-      </div>
-    <?php endif;?>
+  <?php if ($person['gender'] == 'M'):?>
+    <div>
+      <a href="index.php?module=person&action=add_child&father=<?php echo $person['uuid'];?>&mother=<?php echo $spouse['uuid'];?>">
+        <button>Tambah Data Anak</button>
+      </a>
+    </div>
+  <?php else:?>
+    <div>
+      <a href="index.php?module=person&action=add_child&father=<?php echo $spouse['uuid'];?>&mother=<?php echo $person['uuid'];?>">
+        <button>Tambah Data Anak</button>
+      </a>
+    </div>
   <?php endif;?>
 </li>
 <?php endforeach;?>
