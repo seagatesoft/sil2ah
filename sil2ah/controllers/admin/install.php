@@ -35,7 +35,7 @@ class InstallController extends BaseController {
       } else {
         $this->sendLoginPage();
       }
-    } else {
+    } else if($_POST['password'] === $_POST['password_verification']) {
       try {
         $this->dbSource->startTransaction();
         $this->Setting->insertSiteTitle($_POST['siteTitle']);
@@ -66,6 +66,10 @@ class InstallController extends BaseController {
         $this->dbSource->rollback();
         $this->setMessage('Instalasi gagal: ' . $e->getMessage());
       }
+    } else {
+      $this->setView('admin/install');
+      $this->setSiteTitle($this->Setting->getSiteTitle() . ' - Install');
+      $this->setMessage('Password yang Anda masukkan tidak cocok!');
     }
   }
 }

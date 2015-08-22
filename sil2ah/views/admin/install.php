@@ -10,6 +10,8 @@
     <input id="username" type="text" name="username">
     <label for="password">Password</label>
     <input id="password" type="password" name="password">
+    <label for="password_verification">Verifikasi Password </label>
+    <input id="password_verification" type="password" name="password_verification">
     <h3>Akar Pohon Silsilah</h3>
     <label for="rootAncestorName">Nama</label>
     <input id="rootAncestorName" type="text" name="rootAncestorName">
