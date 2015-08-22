@@ -5,6 +5,23 @@
     <h3>Sunting Data</h3>
     <label for="name">Nama</label>
     <input id="name" type="text" name="person[name]" value="<?php echo $person['name'];?>">
+    <?php if ('S' != $person['person_type']):?>
+    <label for="gender">Jenis Kelamin</label>
+    <select id="gender" name="person[gender]">
+      <option value="M" <?php if('M' == $person['gender']) { echo 'selected';};?>>Pria</option>
+      <option value="F" <?php if('F' == $person['gender']) { echo 'selected';};?>>Wanita</option>
+    </select>
+    <label for="sibling_index">Anak ke</label>
+    <select id="sibling_index" name="person[sibling_index]">
+      <?php for ($i=1; $i <= 10; $i++):?>
+        <?php if($i == $person['sibling_index']):?>
+          <option value="<?php echo $i;?>" selected=""><?php echo $i;?></option>
+        <?php else:?>
+          <option value="<?php echo $i;?>"><?php echo $i;?></option>
+        <?php endif;?>
+      <?php endfor;?>
+    </select>
+    <?php endif;?>
     <label for="address">Alamat</label>
     <textarea id="address" name="person_attributes[address]">
       <?php echo $personAttributes['address'];?>
