@@ -24,6 +24,12 @@ class EditController extends BaseController {
         'uuid' => $_POST['person']['uuid'],
         'name' => $_POST['person']['name']
       );
+      if (array_key_exists('gender', $_POST['person'])) {
+        $person['gender'] = $_POST['person']['gender'];
+      }
+      if (array_key_exists('sibling_index', $_POST['person'])) {
+        $person['sibling_index'] = $_POST['person']['sibling_index'];
+      }
       $this->Person->updateRecord($person);
 
       $personAttributes = array(
